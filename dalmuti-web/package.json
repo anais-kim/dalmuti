@@ -1,0 +1,13 @@
+{
+  "name": "dalmuti-web",
+  "version": "0.0.1",
+  "description": "online dalmuti web application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "anais.kim",
+  "dependencies": {
+    "mocha": "^4.0.1"
+  }
+}
