@@ -1,0 +1,8 @@
+$navigation-height: 51px;
+$side-padding: 50px;
+
+@mixin content-wrapper {
+  padding-top: $navigation-height;
+  padding-left: $side-padding;
+  padding-right: $side-padding;
+}

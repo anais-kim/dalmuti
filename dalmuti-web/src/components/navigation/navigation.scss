@@ -1,0 +1,37 @@
+@mixin navigation-link {
+  display: block;
+  padding: 16px;
+  color: white;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $navigation-height;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &-logo {
+    margin-left: 50px;
+    float: left;
+    a {
+      @include navigation-link
+    }
+  }
+
+  &-menu {
+    margin-right: 50px;
+  }
+  &-menu-item {
+    float: right;
+    height: $navigation-height - 2px;
+    a {
+      @include navigation-link
+    }
+    &:hover {
+      border-bottom: 2px solid $accent-color;
+    }
+
+  }
+}
+

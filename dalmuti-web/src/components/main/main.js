@@ -1,21 +1,23 @@
 import React, {Component} from 'react';
-import AppBar from 'react-toolbox/lib/app_bar';
-import Navigation from 'react-toolbox/lib/navigation';
-import { Button } from 'react-toolbox/lib/button';
+import {connect} from 'react-redux';
+import NavigationView from "../navigation/navigation-view";
+import MainContentView from "./main-content-view";
 
 class Main extends Component {
     render() {
         return (
-            <div>
-                {/*<AppBar title='Dalmuti Online' leftIcon='menu'>*/}
-                    {/*<Navigation type='horizontal'>*/}
-                        {/*<Button icon='inbox' label='inbox' flat/>*/}
-                    {/*</Navigation>*/}
-                {/*</AppBar>*/}
-                This is main page.
+            <div className='main-wrapper'>
+                <NavigationView />
+                <MainContentView name={this.props.name}/>
             </div>
         );
     }
 }
 
-export default Main;
+const mapStateToProps = (state) => {
+    let {enter: {name}} = state;
+    name = name || '';
+    return {name};
+}
+
+export default connect(mapStateToProps, undefined)(Main);
