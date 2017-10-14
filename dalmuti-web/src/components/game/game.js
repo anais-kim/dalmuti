@@ -7,7 +7,7 @@ class Game extends Component {
     render() {
         return (
             <div>
-                <NavigationView/>
+                <NavigationView activeMenu='game'/>
                 <div className="game-wrapper">
                     {/*<Others />*/}
                     {/*<CurrentCard />*/}

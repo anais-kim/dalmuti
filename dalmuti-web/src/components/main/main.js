@@ -7,7 +7,7 @@ class Main extends Component {
     render() {
         return (
             <div className='main-wrapper'>
-                <NavigationView />
+                <NavigationView activeMenu='main'/>
                 <MainContentView name={this.props.name}/>
             </div>
         );
