@@ -1,12 +1,8 @@
-@import '../content/content-wrapper';
-
 .main-wrapper {
     @include full-background;
 }
 
-.main-content {
-  @include content-wrapper;
-
-  &-header {
-  }
+.hidden {
+  @include hidden;
 }
+

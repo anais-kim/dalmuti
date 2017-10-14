@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import MyCard from './my-card.js';
-import './game.scss';
 import NavigationView from "../navigation/navigation-view";
 
 class Game extends Component {

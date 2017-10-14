@@ -11,26 +11,26 @@ export default class NavigationView extends Component {
                 <ul className="navigation-menu">
                    <li className="navigation-menu__item">
                        <Link to='/'>
-                           {/*<i class="material-icons navigation-icons">input</i>*/}
-                           Sign Out
+                           <i className="material-icons navigation-menu__item--icon">input</i>
+                           <span className="navigation-menu__item--desc">Sign Out</span>
                        </Link>
                    </li>
                     <li className={`navigation-menu__item ${this.props.activeMenu === 'setting'? 'active':''}`}>
-                       <Link to='/main'>
-                           {/*<i class="material-icons navigation-icons">settings</i>*/}
-                           Setting
+                       <Link to='/setting'>
+                           <i className="material-icons navigation-menu__item--icon">settings</i>
+                           <span className="navigation-menu__item--desc">Setting</span>
                        </Link>
                    </li>
                     <li className={`navigation-menu__item ${this.props.activeMenu === 'game'? 'active':''}`}>
                         <Link to='/game'>
-                            {/*<i class="material-icons navigation-icons">play_circle_filled</i>*/}
-                            Game
+                            <i className="material-icons navigation-menu__item--icon">play_arrow</i>
+                            <span className="navigation-menu__item--desc">Game</span>
                         </Link>
                     </li>
                     <li className={`navigation-menu__item ${this.props.activeMenu === 'main'? 'active':''}`}>
                         <Link to='/main'>
-                            {/*<i class="material-icons navigation-icons">home</i>*/}
-                            Home
+                            <i className="material-icons navigation-menu__item--icon">home</i>
+                            <span className="navigation-menu__item--desc">Home</span>
                         </Link>
                     </li>
                 </ul>

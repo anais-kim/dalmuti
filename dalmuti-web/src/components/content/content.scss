@@ -1,0 +1,7 @@
+.content-wrapper {
+  @include content-wrapper--padding;
+}
+
+.content-header {
+  padding-left: 10px;
+}

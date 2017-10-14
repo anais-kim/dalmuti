@@ -5,6 +5,7 @@ import history from './../history'
 import Gate from './gate/gate';
 import Main from './main/main';
 import Game from './game/game';
+import Setting from './setting/setting';
 import NotFound from './not-found/not-found';
 
 export default class RootComponent extends Component {
@@ -16,6 +17,7 @@ export default class RootComponent extends Component {
                         <Route path="/gate" component={Gate}/>
                         <Route path="/main" component={Main}/>
                         <Route path="/game" component={Game}/>
+                        <Route path="/setting" component={Setting}/>
                         <Redirect exact from="/" to="/gate" />
                         <Route component={NotFound} />
                     </Switch>

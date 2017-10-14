@@ -3,9 +3,12 @@
 @import 'default';
 @import 'image';
 @import 'mixin';
+@import 'size';
 
 @import '../../components/game/game';
+@import '../../components/content/content';
 @import '../../components/main/main';
+@import '../../components/setting/setting';
 @import '../../components/navigation/navigation';
 @import '../../components/gate/gate';
 @import '../../components/not-found/not-found';

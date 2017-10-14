@@ -1,2 +1,37 @@
-$navigation-height: 51px;
 $side-padding: 50px;
+$side-padding--small: 20px;
+
+$navigation-height: 48px;
+$navigation-font-size: 14px;
+$navigation-font-size--small: 16px;
+$navigation-link-padding: 16px;
+$navigation-link-padding--small: 14px;
+
+@mixin side-padding--left {
+  padding-left: $side-padding;
+  @media (max-width: 720px) {
+    padding-left: $side-padding--small;
+  }
+}
+
+@mixin side-padding--right {
+  padding-right: $side-padding;
+  @media (max-width: 720px) {
+    padding-right: $side-padding--small;
+  }
+}
+
+@mixin content-wrapper--padding {
+  @include side-padding--left;
+  @include side-padding--right;
+  padding-top: $navigation-height;
+}
+
+@mixin navigation-link--size--padding {
+  font-size: $navigation-font-size;
+  padding: $navigation-link-padding;
+  @media (max-width: 720px) {
+    font-size: $navigation-font-size--small;
+    padding: $navigation-link-padding--small;
+  }
+}
