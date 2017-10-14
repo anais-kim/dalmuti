@@ -1,15 +1,30 @@
 import React, {Component} from 'react';
-import GateHeader from './gate-header'
-import GateEnter from './gate-enter'
-import './gate.css';
+import GateView from './gate-view';
 
 class Gate extends Component {
+    constructor(props) {
+        super(props);
+        this.onNameChange = this.onNameChange.bind(this);
+        this.onClickEnter = this.onClickEnter.bind(this);
+
+        this.state = {
+            name: ''
+        }
+    }
+
+    onNameChange(name) {
+        this.setState({name: name});
+    }
+
+    onClickEnter() {
+        alert(this.state.name);
+    }
+
     render() {
         return (
-            <div className="gate">
-                <GateHeader />
-                <GateEnter />
-            </div>
+            <GateView name={this.state.name}
+                      onNameChange={this.onNameChange}
+                      onClickEnter={this.onClickEnter}/>
         );
     }
 }

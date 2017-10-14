@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack')
 var appPath = process.cwd();
 
 module.exports = {
@@ -10,7 +11,8 @@ module.exports = {
     devServer: {
         contentBase: path.join(appPath, 'public'),
         port: 7777,
-        inline: true
+        inline: true,
+        historyApiFallback: true
     },
     module: {
         rules: [
@@ -27,10 +29,35 @@ module.exports = {
             },
             {
                 test: /(\.css)|(\.scss)$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                include: /node_modules/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                            sourceMap: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]__[local]___[hash:base64:5]'
+                        }
+                    },
+
+                    "postcss-loader",
+                    "sass-loader"
+                ]
             },
             {
-                test: /(\.png)|(\.svg)/,
+                test: /(\.css)|(\.scss)$/,
+                exclude: /node_modules/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader"
+                ]
+            },
+            {
+                test: /(\.png)|(\.svg)|(\.jpg)/,
                 use: ['url-loader']
             }
         ]

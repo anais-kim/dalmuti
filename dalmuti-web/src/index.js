@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Gate from './components/gate/gate';
-
-const title = 'Dalmuti Online';
+import RootComponent from './components/root-component';
+import './assets/css/index.scss';
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<Gate title={title}/>, rootElement);
+ReactDOM.render(<RootComponent />, rootElement);

@@ -1,6 +1,9 @@
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+@charset "utf-8";
+@import 'color';
+@import 'default';
+@import 'image';
+@import 'mixin';
+
+@import '../../components/game/game';
+@import '../../components/gate/gate';
+@import '../../components/not-found/not-found';
