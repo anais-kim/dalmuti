@@ -1,0 +1,31 @@
+@import "index";
+
+.gate {
+    @extend .center;
+    box-sizing: border-box;
+    width: 360px;
+}
+
+.gate-header {
+    margin: 30px 0;
+}
+
+.gate-header-title {
+    margin: 0;
+    color: #dddddd;
+    font-size: 3rem;
+}
+
+.gate-enter-input-container {
+    float: left;
+    width: 70%;
+}
+
+.gate-enter-button-container {
+    float: left;
+    width: 20%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+

@@ -1,0 +1,31 @@
+.gate-wrapper {
+    @include full-background;
+}
+
+.gate {
+    @include center;
+    box-sizing: border-box;
+    width: 360px;
+
+    &-header {
+        margin: 30px 0;
+        &__title {
+            margin: 0;
+            color: #dddddd;
+            font-size: 3rem;
+        }
+    }
+
+    &-enter {
+        &__input {
+            float: left;
+            width: 70%;
+        }
+        &__button {
+            float: left;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+    }
+}
+
