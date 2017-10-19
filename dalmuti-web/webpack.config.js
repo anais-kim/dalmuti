@@ -1,18 +1,8 @@
-var path = require('path');
-var webpack = require('webpack')
-var appPath = process.cwd();
-
 module.exports = {
-    entry: path.join(appPath, 'src/index.js'),
+    entry: './src/index.js',
     output: {
-        path: path.join(appPath, 'public'),
+        path: __dirname + '/public',
         filename: 'bundle.js'
-    },
-    devServer: {
-        contentBase: path.join(appPath, 'public'),
-        port: 7777,
-        inline: true,
-        historyApiFallback: true
     },
     module: {
         rules: [
@@ -41,7 +31,6 @@ module.exports = {
                             localIdentName: '[name]__[local]___[hash:base64:5]'
                         }
                     },
-
                     "postcss-loader",
                     "sass-loader"
                 ]
